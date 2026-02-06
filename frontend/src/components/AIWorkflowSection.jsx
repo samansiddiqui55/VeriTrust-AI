@@ -63,17 +63,30 @@ const AIWorkflowSection = () => {
 
   const generateImage = async () => {
     setIsGenerating(true);
+    toast.info('Generating image... This may take up to 60 seconds.', { duration: 10000 });
+    
     try {
       const response = await axios.post(`${API_URL}/api/generate-image`, {
         prompt: prompts[selectedPrompt].prompt,
         style: prompts[selectedPrompt].style
+      }, {
+        timeout: 90000 // 90 second timeout for AI generation
       });
       
-      setGeneratedImage(response.data.image_base64);
-      toast.success('Image generated successfully!');
+      if (response.data && response.data.image_base64) {
+        setGeneratedImage(response.data.image_base64);
+        toast.success('Image generated successfully!');
+      } else {
+        throw new Error('No image data received');
+      }
     } catch (error) {
       console.error('Generation error:', error);
-      toast.error('Failed to generate image. Please try again.');
+      const errorMessage = error.response?.data?.detail || error.message || 'Unknown error';
+      if (error.code === 'ECONNABORTED') {
+        toast.error('Generation timed out. Please try again with a simpler prompt.');
+      } else {
+        toast.error(`Generation failed: ${errorMessage}`);
+      }
     } finally {
       setIsGenerating(false);
     }
