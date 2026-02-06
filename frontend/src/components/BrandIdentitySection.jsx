@@ -338,7 +338,4 @@ const BrandIdentitySection = () => {
   );
 };
 
-// Import Fingerprint for the icons
-import { Fingerprint } from 'lucide-react';
-
 export default BrandIdentitySection;
