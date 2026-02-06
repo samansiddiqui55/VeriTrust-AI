@@ -7,11 +7,29 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 const BrandIdentitySection = () => {
   const [copiedColor, setCopiedColor] = useState(null);
 
-  const copyToClipboard = (value, name) => {
-    navigator.clipboard.writeText(value);
-    setCopiedColor(name);
-    toast.success(`${name} copied to clipboard!`);
-    setTimeout(() => setCopiedColor(null), 2000);
+  const copyToClipboard = async (value, name) => {
+    try {
+      // Try modern clipboard API first
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(value);
+      } else {
+        // Fallback for older browsers or non-HTTPS
+        const textArea = document.createElement('textarea');
+        textArea.value = value;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-999999px';
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+      }
+      setCopiedColor(name);
+      toast.success(`${name} (${value}) copied!`);
+      setTimeout(() => setCopiedColor(null), 2000);
+    } catch (err) {
+      // If all clipboard methods fail, show the value in toast for manual copy
+      toast.info(`Copy: ${value}`, { duration: 5000 });
+    }
   };
 
   const colors = {
