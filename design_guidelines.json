@@ -1,0 +1,111 @@
+{
+  "identity": {
+    "name": "VeriTrust AI",
+    "mission": "Stop Fraud Before It Happens. Enterprise-grade identity verification powered by next-gen AI.",
+    "tone": "Trustworthy, Innovative, Precision-Obsessed, Secure",
+    "archetype": "The Performance Pro (Cyber-Trust Variant)"
+  },
+  "typography": {
+    "primary_font": "Outfit",
+    "secondary_font": "Inter",
+    "mono_font": "JetBrains Mono",
+    "scale": {
+      "h1": "text-5xl md:text-7xl font-bold tracking-tight leading-none",
+      "h2": "text-4xl md:text-5xl font-semibold tracking-tight",
+      "h3": "text-2xl md:text-3xl font-medium tracking-normal",
+      "body": "text-base md:text-lg text-slate-400 leading-relaxed",
+      "caption": "text-sm font-mono tracking-wider uppercase text-slate-500"
+    },
+    "import_url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@400;500;700;900&display=swap"
+  },
+  "colors": {
+    "theme": "dark",
+    "palette": {
+      "background": {
+        "default": "#050A14",
+        "paper": "#0B1221",
+        "subtle": "#111827"
+      },
+      "primary": {
+        "main": "#00FF94",
+        "hover": "#00CC76",
+        "foreground": "#000000"
+      },
+      "secondary": {
+        "main": "#3B82F6",
+        "hover": "#2563EB",
+        "foreground": "#FFFFFF"
+      },
+      "accent": {
+        "error": "#EF4444",
+        "warning": "#F59E0B",
+        "success": "#10B981"
+      },
+      "text": {
+        "primary": "#F8FAFC",
+        "secondary": "#94A3B8",
+        "muted": "#64748B"
+      },
+      "border": {
+        "default": "rgba(255, 255, 255, 0.1)",
+        "active": "rgba(0, 255, 148, 0.5)"
+      }
+    },
+    "gradients": {
+      "hero_glow": "radial-gradient(circle at 50% 50%, rgba(0, 255, 148, 0.15) 0%, rgba(5, 10, 20, 0) 70%)",
+      "card_shine": "linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%)"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": {
+      "default": "bg-white/5 backdrop-blur-md border border-white/10",
+      "heavy": "bg-black/40 backdrop-blur-xl border border-white/5"
+    },
+    "borders": {
+      "tracing_beam": "relative overflow-hidden rounded-xl border border-white/10 after:absolute after:inset-0 after:border after:border-primary/50 after:w-full after:h-full after:animate-border-trace",
+      "neon_glow": "shadow-[0_0_20px_rgba(0,255,148,0.3)] border-primary/50"
+    },
+    "textures": {
+      "grid": "bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]",
+      "noise": "opacity-20 mix-blend-overlay"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-8 rounded-full font-semibold transition-all hover:shadow-[0_0_20px_rgba(0,255,148,0.4)]",
+      "secondary": "bg-white/10 text-white hover:bg-white/20 h-12 px-8 rounded-full font-medium backdrop-blur-sm border border-white/10",
+      "outline": "border border-white/20 text-white hover:border-primary hover:text-primary h-12 px-8 rounded-full transition-colors"
+    },
+    "cards": {
+      "feature": "group relative p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1",
+      "stat": "p-6 rounded-xl bg-[#0B1221] border border-white/5 flex flex-col gap-2"
+    },
+    "inputs": {
+      "default": "bg-white/5 border-white/10 text-white placeholder:text-slate-600 focus:border-primary focus:ring-1 focus:ring-primary/50 h-12 rounded-lg"
+    }
+  },
+  "layout_strategies": {
+    "hero": "Split screen: Left aligned typography (H1 + Subtext + CTA), Right aligned 3D/Abstract visual or Dashboard Mockup. Background: Deep Obsidian with subtle grid and green glow.",
+    "features": "Bento Grid (Mode A): Mix of large hero cards (col-span-2) and smaller detail cards. Use 'Tracing Beam' effect on hover.",
+    "trust_section": "Marquee of grayscale logos that turn full color on hover. Opacity 50% default.",
+    "dashboard_preview": "High-density grid. Dark mode UI. Neon accents for data points. Glassmorphism overlays for menus."
+  },
+  "image_urls": {
+    "hero_bg": "https://images.unsplash.com/photo-1710957987034-cea509422852?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "face_scan": "https://images.unsplash.com/photo-1689103722266-1f2f837145e7?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "security_shield": "https://images.unsplash.com/photo-1639503547276-90230c4a4198?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "dashboard_mockup": "https://images.unsplash.com/photo-1753998941488-fc3064ab6094?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "office_team": "https://images.unsplash.com/photo-1758691736975-9f7f643d178e?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "bank_building": "https://images.unsplash.com/photo-1662160085655-43ce2d608ba7?crop=entropy&cs=srgb&fm=jpg&q=85"
+  },
+  "universal_guidelines": [
+    "Do not use gradients for text unless it's a very subtle shine.",
+    "Always use 'Outfit' for headings and 'Inter' for body.",
+    "Primary color (Neon Green) is for SUCCESS and ACTION only. Do not overuse.",
+    "Use 2x padding. If you think p-4 is enough, use p-8.",
+    "All interactive elements must have a hover state (brightness-110 or translate-y-1).",
+    "Use 'sonner' for toasts.",
+    "Ensure all images have alt text.",
+    "Add data-testid to all interactive elements."
+  ]
+}
