@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, Sun, Moon, Copy, Check } from 'lucide-react';
+import { Shield, Sun, Moon, Copy, Check, Fingerprint, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
